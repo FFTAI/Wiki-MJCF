@@ -44,6 +44,12 @@ optional arguments:
 urdf2mjcf /path/to/urdf /path/to/mjcf
 ```
 
+4. Example: convert GR1T1 robot to MJCF:
+
+```shell
+urdf2mjcf /path/to/urdf/gr1t1.urdf /path/to/mjcf/gr1t1.mjcf
+```
+
 ## Thanks
 
 - https://github.com/balandbal/urdf2mjcf
