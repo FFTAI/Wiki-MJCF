@@ -1,0 +1,51 @@
+#! /usr/bin/env python
+from sys import stdout
+from pathlib import Path
+
+from urdf2mjcf import __version__
+from urdf2mjcf.cli import cli
+from urdf2mjcf.app import full_pipeline
+from urdf2mjcf.core import _parse_element as parse_stream, tostring
+
+
+def app(args):
+    """App for URDF-2-MJCF conversion"""
+    result = full_pipeline(
+        parse_stream(args.urdf),
+        sensor_config=parse_stream(args.sensor_config),
+        mujoco_node=parse_stream(args.mujoco_node),
+        default_ground=args.default_ground,
+        default_lighting=args.default_lighting,
+    )
+
+    args.mjcf.write(tostring(result, encoding="unicode"))
+
+    args.urdf.close()
+    args.mjcf.close()
+
+    if args.mujoco_node is not None:
+        args.mujoco_node.close()
+    if args.sensor_config is not None:
+        args.sensor_config.close()
+
+    if args.mjcf != stdout:
+        stdout.write(args.mjcf.name)
+
+
+if __name__ == "__main__":
+    parser = cli()
+
+    parser.add_argument("--version", action="version", version=__version__)
+    parser.add_argument(
+        "-l", dest="license", action="store_true", help="print license information"
+    )
+
+    args = parser.parse_args()
+
+    if args.license:
+        license_path = Path(__file__).resolve().parents[1] / "LICENSE"
+        with open(license_path, "r") as license_file:
+            print(license_file.read())
+        exit(0)
+
+    app(args)

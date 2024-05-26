@@ -1,0 +1,71 @@
+#! /usr/bin/env python
+from time import sleep
+import rospy
+from typing import TypeVar, Union, Dict, Iterable, Optional
+
+from xml.etree.ElementTree import Element
+from defusedxml.ElementTree import fromstring
+
+from urdf2mjcf.app import full_pipeline
+from urdf2mjcf.core import tostring
+
+T = TypeVar("T")
+
+
+def get_param(param_name: str, default: T) -> T:
+    closest_param_name = rospy.search_param(param_name)
+    if closest_param_name is None:
+        return default
+    param = rospy.get_param(closest_param_name, default)
+    return param
+
+
+def parse_xml_string(xml: Union[str, None]) -> Union[Element, None]:
+    if xml is None:
+        return xml
+    else:
+        return fromstring(xml)
+
+
+def to_converter_kwargs(param_dict: Dict[str, str]) -> Dict[str, Union[Element, None]]:
+    return {
+        key: parse_xml_string(get_param(value, None))
+        for key, value in param_dict.items()
+    }
+
+
+if __name__ == "__main__":
+    rospy.init_node("urdf2mjcf")
+
+    urdf_source: Dict[str, str] = get_param(
+        "urdf_source", {"urdf": "robot_description"}
+    )
+    urdf_includes: Optional[Iterable[Dict[str, str]]] = get_param("urdf_includes", None)
+    xml_destination = get_param("xml_destination", "mujoco_xml")
+    default_ground: bool = get_param("add_ground", False)
+    default_lighting: bool = get_param("add_lighting", False)
+
+    while not rospy.has_param(urdf_source["urdf"]) and not rospy.is_shutdown():
+        rospy.logerr_throttle_identical(5, f"Polling for URDF at{urdf_source['urdf']}...")
+        sleep(0.1)
+
+    result = full_pipeline(
+        **to_converter_kwargs(urdf_source),
+        default_ground=default_ground,
+        default_lighting=default_lighting,
+    )
+
+    if urdf_includes is not None:
+        while (
+            not all(map(lambda value: rospy.has_param(value["urdf"]), urdf_includes))
+            and not rospy.is_shutdown()
+        ):
+            rospy.logerr_once(f"Polling for URDFs... {urdf_includes}")
+            sleep(0.1)
+
+        for urdf_include in urdf_includes:
+            mjcf_include = full_pipeline(**to_converter_kwargs(urdf_include))
+            for idx, element in enumerate(mjcf_include):
+                result.insert(idx, element)
+
+    rospy.set_param(xml_destination, tostring(result, encoding="unicode"))

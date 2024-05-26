@@ -1,0 +1,14 @@
+<!-- https://mujoco.readthedocs.io/en/latest/XMLreference.html#introduction -->
+<mujoco>
+
+    <compiler strippath="false" fusestatic="false" discardvisual="true">
+        <lengthrange/>
+    </compiler>
+
+    <option timestep="0.001" cone="elliptic">
+        <flag/>
+    </option>
+
+    <size/>
+
+</mujoco>

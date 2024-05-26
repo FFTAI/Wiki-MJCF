@@ -1,37 +1,49 @@
 # Wiki-MJCF
 
-#### 介绍
-The tool to transfer from urdf to mjcf
+This repository provides a tool to transfer from URDF file to MJCF.
 
-#### 软件架构
-软件架构说明
+## User Guide
 
+1. Install the package using pip:
 
-#### 安装教程
+```shell
+pip install mujoco
+pip install -e .
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+2. Test the package:
 
-#### 使用说明
+```shell
+urdf2mjcf --help
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```
+usage: urdf2mjcf [-h] [-s SENSOR_CONFIG] [-m MUJOCO_NODE] [--ground] [--lighting] [--version] [-l] [urdf] [mjcf]
 
-#### 参与贡献
+Copyright (c) 2022 Fraunhofer IPA; use option '-l' to print license.
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+Parse a URDF model into MJCF format
 
+positional arguments:
+  urdf              the URDF file to convert (default: <_io.TextIOWrapper name='<stdin>' mode='r' encoding='utf-8'>)
+  mjcf              the converted MJCF file (default: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>)
 
-#### 特技
+optional arguments:
+  -h, --help        show this help message and exit
+  -s SENSOR_CONFIG  the XML file of the sensor configuration (default: None)
+  -m MUJOCO_NODE    the XML file defining the global MuJoCo configuration (default: None)
+  --ground          whether to add the default ground plane to the MuJoCo model (default: False)
+  --lighting        whether to add the default lighting to the MuJoCo model (default: False)
+  --version         show program's version number and exit
+  -l                print license information (default: False)
+```
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+3. Convert a URDF file to MJCF:
+
+```shell
+urdf2mjcf /path/to/urdf /path/to/mjcf
+```
+
+## Thanks
+
+- https://github.com/balandbal/urdf2mjcf

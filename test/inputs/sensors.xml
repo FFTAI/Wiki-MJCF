@@ -1,0 +1,9 @@
+<sensorconfig>
+    <body name="panda_link7">
+        <site name="ee_site" pos="0 0 0.107" quat="0.707388 0 0 -0.706825"/>
+    </body>
+    <sensor>
+        <force site="ee_site" name="ee_force_sensor"/>
+        <torque site="ee_site" name="ee_torque_sensor"/>
+    </sensor>
+</sensorconfig>

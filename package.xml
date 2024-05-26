@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>urdf2mjcf</name>
+  <version>2.0.4</version>
+  <description>The urdf2mjcf package</description>
+
+  <maintainer email="balazs.andras.balint@ipa.fraunhofer.de">Balázs András Bálint</maintainer>
+
+  <license>BSD-3-Clause</license>
+
+  <url type="repository">https://github.com/balandbal/urdf2mjcf.git</url>
+
+  <author email="balazs.andras.balint@ipa.fraunhofer.de">Balázs András Bálint</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>python3-rospkg</depend>
+  <depend>python3-defusedxml</depend>
+
+</package>
