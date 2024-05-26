@@ -50,6 +50,19 @@ urdf2mjcf /path/to/urdf /path/to/mjcf
 urdf2mjcf /path/to/urdf/gr1t1.urdf /path/to/mjcf/gr1t1.mjcf
 ```
 
+5. Add the ground plane and lighting to the MJCF file:
+
+```shell
+urdf2mjcf /path/to/urdf/gr1t1.urdf /path/to/mjcf/gr1t1.mjcf --ground --lighting
+```
+
+6. Change base height of the robot:
+    - Edit `<body name="base">` in the MJCF file.
+    ```
+    <body name="base" pos="0 0 0.95">
+    ```
+
+
 ## Thanks
 
 - https://github.com/balandbal/urdf2mjcf
