@@ -5,21 +5,12 @@
         <default class="gr1t1">
             <joint damping="1" armature="0.1"/>
             <default class="visual">
-                <geom type="mesh" contype="0" conaffinity="0" group="2" material="black"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="2"/>
             </default>
             <default class="collision">
                 <geom group="3" mass="0" density="0"/>
-                <default class="foot">
+                <default class="base_collision">
                     <geom type="capsule" size=".014"/>
-                    <default class="foot1">
-                        <geom fromto="-.035 0 -0.056 .02 0 -0.045"/>
-                    </default>
-                    <default class="foot2">
-                        <geom fromto=".02 0 -0.045 .115 0 -0.056"/>
-                    </default>
-                    <default class="foot3">
-                        <geom fromto=".14 -.03 -0.056 .14 .03 -0.056"/>
-                    </default>
                 </default>
             </default>
             <site size="0.001" rgba="0.5 0.5 0.5 0.3" group="4"/>
@@ -27,9 +18,6 @@
     </default>
 
     <asset>
-        <material name="black" rgba="0.1 0.1 0.1 1"/>
-        <material name="white" rgba="1 1 1 1"/>
-
         <mesh name="base" file="base.STL"/>
         <mesh name="link_left_thigh_roll" file="l_thigh_roll.STL"/>
         <mesh name="link_left_thigh_yaw" file="l_thigh_yaw.STL"/>
