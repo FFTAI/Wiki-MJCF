@@ -69,9 +69,9 @@ urdf2mjcf ./models/GR1/GR1T2/urdf/GR1T2_raw.urdf ./models/GR1/GR1T2/mjcf/GR1T2_r
     <body name="base" pos="0 0 0.95">
     ```
 
-## Test
+## Verification
 
-If you want to test the output mjcf file, you can refer to the following repository:
+If you want to verify the output mjcf file, you can refer to the following repository:
 
 - [Wiki-GRx-Mujoco in Github](https://gitee.com/FFTAI/wiki-grx-mujoco/)
 - [Wiki-GRx-Mujoco in Gitee](https://gitee.com/FourierIntelligence/wiki-grx-mujoco/)
