@@ -1,30 +1,68 @@
 <mujoco model="GR1T2">
   <compiler angle="radian" />
+  <asset>
+    <mesh name="base" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/base.STL" />
+    <mesh name="Lleg1" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Lleg1.STL" />
+    <mesh name="Lleg2" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Lleg2.STL" />
+    <mesh name="Lleg3" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Lleg3.STL" />
+    <mesh name="Lleg4" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Lleg4.STL" />
+    <mesh name="Lleg5" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Lleg5.STL" />
+    <mesh name="Lleg6" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Lleg6.STL" />
+    <mesh name="Rleg1" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rleg1.STL" />
+    <mesh name="Rleg2" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rleg2.STL" />
+    <mesh name="Rleg3" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rleg3.STL" />
+    <mesh name="Rleg4" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rleg4.STL" />
+    <mesh name="Rleg5" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rleg5.STL" />
+    <mesh name="Rleg6" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rleg6.STL" />
+    <mesh name="waist3" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/waist3.STL" />
+    <mesh name="waist2" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/waist2.STL" />
+    <mesh name="waist1" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/waist1.STL" />
+    <mesh name="Larm1" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Larm1.STL" />
+    <mesh name="Larm2" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Larm2.STL" />
+    <mesh name="Larm3" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Larm3.STL" />
+    <mesh name="Larm4" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Larm4.STL" />
+    <mesh name="Larm5" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Larm5.STL" />
+    <mesh name="Larm6" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Larm6.STL" />
+    <mesh name="Larm7" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Larm7.STL" />
+    <mesh name="Rarm1" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rarm1.STL" />
+    <mesh name="Rarm2" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rarm2.STL" />
+    <mesh name="Rarm3" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rarm3.STL" />
+    <mesh name="Rarm4" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rarm4.STL" />
+    <mesh name="Rarm5" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rarm5.STL" />
+    <mesh name="Rarm6" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rarm6.STL" />
+    <mesh name="Rarm7" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/Rarm7.STL" />
+    <mesh name="head3" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/head3.STL" />
+    <mesh name="head2" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/head2.STL" />
+    <mesh name="head1" file="/home/fftai/Repository/wiki-mjcf/models/GR1/GR1T2/urdf/../meshes/head1.STL" />
+  </asset>
   <worldbody>
-    <body name="base">
+    <body name="base" pos="0 0 0.95">
       <inertial pos="-0.048532 -0.00089322 -0.032851" quat="0.359123 0.355323 -0.61214 0.608326" mass="4.9859" diaginertia="0.0502243 0.0443403 0.0167704" />
+      <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="base" />
       <body name="l_thigh_roll" pos="-0.048 0.105 -0.0575">
         <inertial pos="0.042108 5.3388e-05 0.0025561" quat="0.000951199 0.75733 0.00226652 0.653028" mass="1.24084" diaginertia="0.00139721 0.00109616 0.000971712" />
         <joint name="l_hip_roll" pos="0 0 0" axis="1 0 0" range="-0.09 0.79" actuatorfrcrange="-48 48" />
+        <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Lleg1" />
         <body name="l_thigh_yaw" pos="0.048 0 -0.0305">
           <inertial pos="-0.00036975 0.048008 -0.10263" quat="0.703435 0.0400874 -0.0739438 0.705766" mass="3.9947" diaginertia="0.0141906 0.00974878 0.00712104" />
           <joint name="l_hip_yaw" pos="0 0 0" axis="0 0 1" range="-0.7 0.7" actuatorfrcrange="-66 66" />
+          <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Lleg2" />
           <body name="l_thigh_pitch" pos="0 0 -0.11">
             <inertial pos="0.0023293 -0.018978 -0.09346" quat="0.709706 0.0401023 -0.0585618 0.700914" mass="6.1575" diaginertia="0.0860379 0.0814364 0.0141615" />
             <joint name="l_hip_pitch" pos="0 0 0" axis="0 1 0" range="-1.75 0.7" actuatorfrcrange="-225 225" />
-            <geom size="0.05 0.175" pos="0 0 -0.15" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+            <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Lleg3" />
             <body name="l_shank_pitch" pos="0 0 -0.359995">
               <inertial pos="0.0026504 0.0058504 -0.12267" quat="0.668844 0.0129955 -0.000303131 0.743289" mass="2.4196" diaginertia="0.0211876 0.0209532 0.00159024" />
               <joint name="l_knee_pitch" pos="0 0 0" axis="0 1 0" range="-0.09 1.92" actuatorfrcrange="-225 225" />
-              <geom size="0.05 0.1" pos="0 0 -0.15" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+              <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Lleg4" />
               <body name="l_foot_pitch" pos="0 0 -0.34">
                 <inertial pos="-1.2374e-08 -1.3607e-08 0" quat="0.707107 0.707107 0 0" mass="0.049737" diaginertia="5.2e-06 4.41e-06 3.71e-06" />
                 <joint name="l_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.05 0.52" actuatorfrcrange="-15 15" />
+                <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Lleg5" />
                 <body name="l_foot_roll">
                   <inertial pos="0.035077 0.00026914 -0.036774" quat="7.10825e-05 0.726356 -2.08931e-05 0.687319" mass="0.591221" diaginertia="0.00282255 0.00258496 0.000391055" />
                   <joint name="l_ankle_roll" pos="0 0 0" axis="1 0 0" range="-0.44 0.44" actuatorfrcrange="-30 30" />
-                  <geom name="l_foot_1" size="0.02 0.12" pos="0.05 0.02 -0.035" quat="0.707105 0 0.707108 0" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
-                  <geom name="l_foot_2" size="0.02 0.12" pos="0.05 -0.02 -0.035" quat="0.707105 0 0.707108 0" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+                  <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Lleg6" />
                 </body>
               </body>
             </body>
@@ -34,25 +72,27 @@
       <body name="r_thigh_roll" pos="-0.048 -0.105 -0.0575">
         <inertial pos="0.042109 -5.244e-05 0.0025563" quat="-0.000958227 0.757316 -0.00228287 0.653044" mass="1.2408" diaginertia="0.00139725 0.00109626 0.000971768" />
         <joint name="r_hip_roll" pos="0 0 0" axis="1 0 0" range="-0.79 0.09" actuatorfrcrange="-48 48" />
+        <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rleg1" />
         <body name="r_thigh_yaw" pos="0.048 0 -0.0305">
           <inertial pos="-0.000369 -0.048008 -0.10263" quat="0.705764 -0.0739587 0.0400772 0.703435" mass="3.9947" diaginertia="0.0141904 0.00974868 0.00712096" />
           <joint name="r_hip_yaw" pos="0 0 0" axis="0 0 1" range="-0.7 0.7" actuatorfrcrange="-66 66" />
+          <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rleg2" />
           <body name="r_thigh_pitch" pos="0 0 -0.11">
             <inertial pos="0.0023609 0.019072 -0.093254" quat="0.70026 -0.0586384 0.040433 0.710326" mass="6.1575" diaginertia="0.0861752 0.0815583 0.0142018" />
             <joint name="r_hip_pitch" pos="0 0 0" axis="0 1 0" range="-1.75 0.7" actuatorfrcrange="-225 225" />
-            <geom size="0.05 0.175" pos="0 0 -0.15" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+            <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rleg3" />
             <body name="r_shank_pitch" pos="0 0 -0.359995">
               <inertial pos="0.0026636 -0.0058849 -0.12251" quat="0.742943 -0.000565827 0.013187 0.669224" mass="2.4196" diaginertia="0.0211282 0.0208909 0.00158776" />
               <joint name="r_knee_pitch" pos="0 0 0" axis="0 1 0" range="-0.09 1.92" actuatorfrcrange="-225 225" />
-              <geom size="0.05 0.1" pos="0 0 -0.15" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+              <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rleg4" />
               <body name="r_foot_pitch" pos="0 0 -0.34">
                 <inertial pos="-1.2374e-08 1.3607e-08 -2.1195e-10" quat="0.707107 0.707107 0 0" mass="0.049737" diaginertia="5.2e-06 4.41e-06 3.71e-06" />
                 <joint name="r_ankle_pitch" pos="0 0 0" axis="0 1 0" range="-1.05 0.52" actuatorfrcrange="-15 15" />
+                <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rleg5" />
                 <body name="r_foot_roll">
                   <inertial pos="0.035078 -0.00026903 -0.036775" quat="-8.08951e-05 0.726358 2.37681e-05 0.687317" mass="0.59122" diaginertia="0.00282244 0.00258489 0.000391023" />
                   <joint name="r_ankle_roll" pos="0 0 0" axis="1 0 0" range="-0.44 0.44" actuatorfrcrange="-30 30" />
-                  <geom name="r_foot_1" size="0.02 0.12" pos="0.05 0.02 -0.035" quat="0.707105 0 0.707108 0" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
-                  <geom name="r_foot_2" size="0.02 0.12" pos="0.05 -0.02 -0.035" quat="0.707105 0 0.707108 0" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+                  <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rleg6" />
                 </body>
               </body>
             </body>
@@ -62,39 +102,45 @@
       <body name="link_waist_yaw" pos="0 0 0.0065">
         <inertial pos="-0.0049526 -0.00090609 0.0262" quat="0.542631 0.529181 -0.457917 0.464576" mass="0.507438" diaginertia="0.00142661 0.00109837 0.000824081" />
         <joint name="joint_waist_yaw" pos="0 0 0" axis="0 0 1" range="-1.05 1.05" actuatorfrcrange="-66 66" />
+        <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="waist3" />
         <body name="link_waist_pitch" pos="0 0 0.057">
           <inertial pos="0.0045612 -0.0044005 0.040369" quat="0.978202 -0.0539856 0.0371241 -0.197049" mass="2.90421" diaginertia="0.00850445 0.00848089 0.00320118" />
           <joint name="joint_waist_pitch" pos="0 0 0" axis="0 1 0" range="-0.52 1.22" actuatorfrcrange="-66 66" />
+          <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="waist2" />
           <body name="link_waist_roll" pos="0 0 0.081">
             <inertial pos="-0.0094995 8.7428e-05 0.16729" quat="0.999359 -0.000385668 -0.0357383 0.00217327" mass="7.54469" diaginertia="0.063061 0.0510142 0.0384047" />
             <joint name="joint_waist_roll" pos="0 0 0" axis="1 0 0" range="-0.7 0.7" actuatorfrcrange="-66 66" />
-            <geom size="0.1 0.1" pos="0 0 0.15" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+            <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="waist1" />
             <body name="link_torso" pos="0 0 0.160213">
               <inertial pos="0 0 0" mass="0" diaginertia="0 0 0" />
               <body name="l_upper_arm_pitch" pos="0 0.126624 0.0590455" quat="0.976296 0.216441 0 0">
                 <inertial pos="0.0054188 0.05902 0.00011843" quat="0.719753 0.692726 -0.0305981 -0.0339146" mass="0.78809" diaginertia="0.00077767 0.000679926 0.000492134" />
                 <joint name="l_shoulder_pitch" pos="0 0 0" axis="0 1 0" range="-2.79 1.92" actuatorfrcrange="-38 38" />
+                <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Larm1" />
                 <body name="l_upper_arm_roll" pos="0 0.067 0" quat="0.976296 -0.216441 0 0">
                   <inertial pos="0.01986 0.02608 -0.025535" quat="0.893234 0.357735 0.271874 -0.0156034" mass="0.1786" diaginertia="0.00023545 0.000209436 9.26143e-05" />
                   <joint name="l_shoulder_roll" pos="0 0 0" axis="1 0 0" range="-0.57 3.27" actuatorfrcrange="-38 38" />
+                  <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Larm2" />
                   <body name="l_upper_arm_yaw" pos="0 0.0403814 -0.0572328">
                     <inertial pos="0.00010029 0.0012809 -0.097194" quat="0.999843 0.0176975 -0.000104318 -0.000563119" mass="0.98085" diaginertia="0.00618618 0.00611969 0.000570189" />
                     <joint name="l_shoulder_yaw" pos="0 0 0" axis="0 0 1" range="-2.97 2.97" actuatorfrcrange="-30 30" />
-                    <geom size="0.03 0.055" pos="0 0 -0.05" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+                    <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Larm3" />
                     <body name="l_lower_arm_pitch" pos="0 0.00125501 -0.188749">
                       <inertial pos="7.6884e-09 0.020584 -0.020113" quat="0.676835 -0.204682 0.204682 0.676835" mass="0.059535" diaginertia="3.12523e-05 2.796e-05 1.40177e-05" />
                       <joint name="l_elbow_pitch" pos="0 0 0" axis="0 1 0" range="-2.27 2.27" actuatorfrcrange="-30 30" />
+                      <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Larm4" />
                       <body name="l_hand_yaw" pos="0 0.000299612 -0.0404989">
                         <inertial pos="-0.00048885 0.0013916 -0.08204" quat="0.99956 -0.00194832 -2.05965e-05 0.0296028" mass="1.2684" diaginertia="0.00419493 0.00409086 0.000847261" />
                         <joint name="l_wrist_yaw" pos="0 0 0" axis="0 0 1" range="-2.97 2.97" actuatorfrcrange="-10.2 10.2" />
-                        <geom size="0.035 0.085" pos="0 0 -0.08" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+                        <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Larm5" />
                         <body name="l_hand_roll" pos="0 0.001337 -0.20108">
                           <inertial pos="1.566e-08 -0.00043791 -2.922e-06" quat="0.5 0.5 0.5 0.5" mass="0.0054351" diaginertia="3.6e-07 3.6e-07 7e-08" />
                           <joint name="l_wrist_roll" pos="0 0 0" axis="1 0 0" range="-0.96 0.87" actuatorfrcrange="-3.95 3.95" />
+                          <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Larm6" />
                           <body name="l_hand_pitch">
                             <inertial pos="0.0058876 -0.0010755 -0.082238" quat="0.813153 0.040279 0.00796725 0.580599" mass="0.54891" diaginertia="0.00152687 0.00108682 0.000582753" />
                             <joint name="l_wrist_pitch" pos="0 0 0" axis="0 1 0" range="-0.61 0.61" actuatorfrcrange="-3.95 3.95" />
-                            <geom size="0.036" pos="0 0 -0.07" rgba="0.75294 0.75294 0.75294 1" />
+                            <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Larm7" />
                           </body>
                         </body>
                       </body>
@@ -105,27 +151,31 @@
               <body name="r_upper_arm_pitch" pos="0 -0.126624 0.0590455" quat="0.976296 -0.21644 0 0">
                 <inertial pos="0.0054189 -0.058978 0.0001189" quat="0.688371 0.723998 0.033838 0.0287698" mass="0.78809" diaginertia="0.000777007 0.000679609 0.000492064" />
                 <joint name="r_shoulder_pitch" pos="0 0 0" axis="0 1 0" range="-2.79 1.92" actuatorfrcrange="-38 38" />
+                <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rarm1" />
                 <body name="r_upper_arm_roll" pos="0 -0.067 0" quat="0.976296 0.21644 0 0">
                   <inertial pos="0.019868 -0.025881 -0.025684" quat="0.89443 -0.354722 0.271831 0.0165736" mass="0.1786" diaginertia="0.000235434 0.000209404 9.26224e-05" />
                   <joint name="r_shoulder_roll" pos="0 0 0" axis="1 0 0" range="-3.27 0.57" actuatorfrcrange="-38 38" />
+                  <geom type="mesh" rgba="0.89804 0.91765 0.92941 1" mesh="Rarm2" />
                   <body name="r_upper_arm_yaw" pos="0 -0.04 -0.0575">
                     <inertial pos="-0.00010032 -0.00063501 -0.097127" quat="0.999896 -0.0143971 0.000111836 0.000334005" mass="0.98085" diaginertia="0.0061732 0.00610683 0.00057023" />
                     <joint name="r_shoulder_yaw" pos="0 0 0" axis="0 0 1" range="-2.97 2.97" actuatorfrcrange="-30 30" />
-                    <geom size="0.03 0.055" pos="0 0 -0.05" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+                    <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rarm3" />
                     <body name="r_lower_arm_pitch" pos="0 0 -0.18853">
                       <inertial pos="-7.6455e-09 -0.020449 -0.020249" quat="0.676142 0.20696 -0.20696 0.676142" mass="0.059535" diaginertia="3.12637e-05 2.796e-05 1.40163e-05" />
                       <joint name="r_elbow_pitch" pos="0 0 0" axis="0 1 0" range="-2.27 2.27" actuatorfrcrange="-30 30" />
+                      <geom type="mesh" rgba="0.79216 0.81961 0.93333 1" mesh="Rarm4" />
                       <body name="r_hand_yaw" pos="0 -3.03303e-05 -0.0405">
                         <inertial pos="0.00048881 -0.00084627 -0.082047" quat="0.999548 0.00527184 -7.7624e-05 0.0295879" mass="1.2684" diaginertia="0.00419493 0.00409087 0.000847259" />
                         <joint name="r_wrist_yaw" pos="0 0 0" axis="0 0 1" range="-2.97 2.97" actuatorfrcrange="-10.2 10.2" />
-                        <geom size="0.035 0.085" pos="0 0 -0.08" type="cylinder" rgba="0.75294 0.75294 0.75294 1" />
+                        <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rarm5" />
                         <body name="r_hand_roll" pos="0 0 -0.201084">
                           <inertial pos="-1.552e-08 0.00043792 -1.1275e-08" quat="0.5 0.5 0.5 0.5" mass="0.0054351" diaginertia="3.6e-07 3.6e-07 7e-08" />
                           <joint name="r_wrist_roll" pos="0 0 0" axis="1 0 0" range="-0.87 0.96" actuatorfrcrange="-3.95 3.95" />
+                          <geom type="mesh" rgba="0.8902 0.8902 0.91373 1" mesh="Rarm6" />
                           <body name="r_hand_pitch">
                             <inertial pos="0.0058875 0.0016218 -0.082229" quat="0.580588 0.0098997 0.0375703 0.81327" mass="0.54891" diaginertia="0.00152691 0.00108681 0.000582768" />
                             <joint name="r_wrist_pitch" pos="0 0 0" axis="0 1 0" range="-0.61 0.61" actuatorfrcrange="-3.95 3.95" />
-                            <geom size="0.036" pos="0 0 -0.07" rgba="0.75294 0.75294 0.75294 1" />
+                            <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="Rarm7" />
                           </body>
                         </body>
                       </body>
@@ -136,12 +186,15 @@
               <body name="link_head_pitch" pos="0.001 -0.000225513 0.144787">
                 <inertial pos="0.00043792 1.5503e-08 -1.1298e-08" quat="0.707107 0.707107 0 0" mass="0.00543512" diaginertia="3.6e-07 3.6e-07 7e-08" />
                 <joint name="joint_head_pitch" pos="0 0 0" axis="0 1 0" range="-0.87 0.87" actuatorfrcrange="-3.95 3.95" />
+                <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="head3" />
                 <body name="link_head_roll">
                   <inertial pos="-0.003976 2.2544e-05 0.015347" quat="0.669576 0.669576 0.227306 -0.227306" mass="0.0713171" diaginertia="3.07787e-05 2.49813e-05 2.039e-05" />
                   <joint name="joint_head_roll" pos="0 0 0" axis="1 0 0" range="-0.35 0.35" actuatorfrcrange="-3.95 3.95" />
+                  <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="head2" />
                   <body name="link_head_yaw" pos="0 5.373e-05 0.036">
                     <inertial pos="0.02323 0.00026918 0.11024" quat="0.694627 -0.130794 -0.130531 0.695232" mass="1.38984" diaginertia="0.00988205 0.00835953 0.00593029" />
                     <joint name="joint_head_yaw" pos="0 0 0" axis="0 0 1" range="-2.71 2.71" actuatorfrcrange="-3.95 3.95" />
+                    <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="head1" />
                   </body>
                 </body>
               </body>
@@ -151,5 +204,5 @@
       </body>
       <body name="link_imu" pos="-0.0645 0 -0.102" />
     </body>
-  </worldbody>
-</mujoco>
+  <geom name="ground_plane" type="plane" size="5 5 10" material="MatPlane" rgba="1 1 1 1" /><light pos="0 0 1000" castshadow="true" /></worldbody>
+<asset><texture name="texplane" builtin="checker" height="512" width="512" rgb1=".2 .3 .4" rgb2=".1 .15 .2" type="2d" /><material name="MatPlane" reflectance="0.5" shininess="0.01" specular="0.1" texrepeat="1 1" texture="texplane" texuniform="true" /></asset></mujoco>

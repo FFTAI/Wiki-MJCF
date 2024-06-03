@@ -1,5 +1,9 @@
 # Wiki-MJCF
 
+<img src="./pictures/gr1t1_mjcf.png" width="300" height="360" />
+<img src="./pictures/gr1t2_mjcf.png" width="300" height="360" />
+
+Welcome to the Fourier Intelligence Wiki-MJCF Repository! 
 This repository provides a tool to transfer from URDF file to MJCF.
 
 ## User Guide
@@ -52,6 +56,9 @@ urdf2mjcf ./models/GR1/GR1T1/urdf/GR1T1.urdf ./models/GR1/GR1T1/mjcf/GR1T1.mjcf 
 
 # GR1T1_raw is the model with the original collision
 urdf2mjcf ./models/GR1/GR1T1/urdf/GR1T1_raw.urdf ./models/GR1/GR1T1/mjcf/GR1T1_raw.mjcf --ground --lighting
+
+# GR1T2_raw is the model with the original collision
+urdf2mjcf ./models/GR1/GR1T2/urdf/GR1T2_raw.urdf ./models/GR1/GR1T2/mjcf/GR1T2_raw.mjcf --ground --lighting
 ```
 
 5. Change base height of the robot:
