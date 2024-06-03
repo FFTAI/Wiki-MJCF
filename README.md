@@ -4,7 +4,9 @@
 <img src="./pictures/gr1t2_mjcf.png" width="300" height="360" />
 
 Welcome to the Fourier Intelligence Wiki-MJCF Repository!
-This repository provides a tool to transfer from URDF file to MJCF.
+
+This repository provides a tool to transfer from URDF file to MJCF. It is developed for converting the GRx robot URDF files to MJCF files.
+However, it can also be used for other URDF files.
 
 ## User Guide
 
