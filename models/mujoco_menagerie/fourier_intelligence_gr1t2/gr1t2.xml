@@ -72,6 +72,7 @@
             <inertial pos="-0.0508888 0.000109183 -0.0455794" quat="0.706855 0.707166 0.0123661 -0.0109307" mass="6.45117" diaginertia="0.0149302 0.0127972 0.00640923"/>
             <freejoint/>
             <geom class="visual" rgba="0.752941 0.752941 0.752941 1" mesh="base"/>
+
             <body name="l_thigh_roll" pos="-0.047999 0.105 -0.057493">
                 <inertial pos="0.04163 3.4568e-05 -0.0021382" quat="0.575529 0.581908 -0.40597 0.406619" mass="1.1437" diaginertia="0.00117548 0.00100413 0.000943892"/>
                 <joint name="l_hip_roll" pos="0 0 0" axis="1 0 0" range="-0.09 0.79"/>
@@ -102,6 +103,7 @@
                     </body>
                 </body>
             </body>
+
             <body name="r_thigh_roll" pos="-0.047999 -0.105 -0.057508">
                 <inertial pos="0.0416295 3.45678e-05 -0.00213824" quat="0.57555 0.581927 -0.405942 0.406589" mass="1.14367" diaginertia="0.00117548 0.00100417 0.000943891"/>
                 <joint name="r_hip_roll" pos="0 0 0" axis="1 0 0" range="-0.79 0.09"/>
@@ -132,6 +134,7 @@
                     </body>
                 </body>
             </body>
+
             <body name="waist_yaw" pos="0 0 0.0065">
                 <inertial pos="-0.010388 -0.00169636 0.0224709" quat="8.03475e-05 0.752953 -6.91813e-06 0.658075" mass="0.37886" diaginertia="0.000387148 0.000354992 0.000193448"/>
                 <joint name="waist_yaw" pos="0 0 0" axis="0 0 1" range="-1.05 1.05"/>
@@ -159,6 +162,7 @@
                                 </body>
                             </body>
                         </body>
+
                         <body name="l_upper_arm_pitch" pos="0 0.12661 0.21727" quat="0.976289 0.216473 0 0">
                             <inertial pos="0.00515733 0.0588337 0.000122944" quat="0.999793 0.0203364 -0.000117253 0.0011083" mass="0.777394" diaginertia="0.000546411 0.000340581 0.000319359"/>
                             <joint name="l_shoulder_pitch" pos="0 0 0" axis="0 1 0" range="-2.79 1.92"/>
@@ -196,6 +200,7 @@
                                 </body>
                             </body>
                         </body>
+
                         <body name="r_upper_arm_pitch" pos="0 -0.12664 0.21725" quat="0.976303 -0.216409 0 0">
                             <inertial pos="0.00515735 -0.0587916 0.000122944" quat="0.999675 -0.0254775 -0.000125407 -0.000494276" mass="0.777391" diaginertia="0.00054641 0.000340601 0.00031934"/>
                             <joint name="r_shoulder_pitch" pos="0 0 0" axis="0 1 0" range="-2.79 1.92"/>
