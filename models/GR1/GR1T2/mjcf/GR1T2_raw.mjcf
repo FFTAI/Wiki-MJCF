@@ -106,7 +106,7 @@
                 <body name="link_waist_pitch" pos="0 0 0.057">
                     <inertial pos="0.0045612 -0.0044005 0.040369" quat="0.978202 -0.0539856 0.0371241 -0.197049" mass="2.90421" diaginertia="0.00850445 0.00848089 0.00320118"/>
                     <joint name="joint_waist_pitch" pos="0 0 0" axis="0 1 0" range="-0.52 1.22" actuatorfrcrange="-60 60"/>
-                    <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="waist_roll"/>
+                    <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="waist_pitch"/>
                     <body name="link_waist_roll" pos="0 0 0.081">
                         <inertial pos="-0.0094995 8.7428e-05 0.16729" quat="0.999359 -0.000385668 -0.0357383 0.00217327" mass="7.54469" diaginertia="0.063061 0.0510142 0.0384047"/>
                         <joint name="joint_waist_roll" pos="0 0 0" axis="1 0 0" range="-0.7 0.7" actuatorfrcrange="-60 60"/>

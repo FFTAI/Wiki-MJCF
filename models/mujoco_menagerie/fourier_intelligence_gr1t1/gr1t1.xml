@@ -71,6 +71,7 @@
         <body name="base" pos="0 0 0.95" childclass="gr1t1">
             <inertial pos="-0.0508888 0.000109183 -0.0455794" quat="0.706855 0.707166 0.0123661 -0.0109307" mass="6.45117" diaginertia="0.0149302 0.0127972 0.00640923"/>
             <freejoint/>
+
             <geom class="visual" rgba="0.752941 0.752941 0.752941 1" mesh="base"/>
             <body name="link_left_thigh_roll" pos="-0.047999 0.105 -0.057493">
                 <inertial pos="0.04163 3.4568e-05 -0.0021382" quat="0.575529 0.581908 -0.40597 0.406619" mass="1.1437" diaginertia="0.00117548 0.00100413 0.000943892"/>

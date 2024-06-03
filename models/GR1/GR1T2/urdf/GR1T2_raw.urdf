@@ -815,7 +815,7 @@
                     rpy="0 0 0"/>
             <geometry>
                 <mesh
-                        filename="../meshes/waist_roll.STL"/>
+                        filename="../meshes/waist_pitch.STL"/>
             </geometry>
             <material
                     name="">
@@ -829,7 +829,7 @@
                     rpy="0 0 0"/>
             <geometry>
                 <mesh
-                        filename="../meshes/waist_roll.STL"/>
+                        filename="../meshes/waist_pitch.STL"/>
             </geometry>
         </collision>
     </link>
