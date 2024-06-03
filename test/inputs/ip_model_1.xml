@@ -1,7 +1,0 @@
-<mujoco>
-    <worldbody>
-        <body>
-            <geom type="box" size="1 1 1" rgba="0 1 0 0.5"/>
-        </body>
-    </worldbody>
-</mujoco>

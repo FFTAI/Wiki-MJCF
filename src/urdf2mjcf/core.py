@@ -101,7 +101,7 @@ def abspath_from_ros_uri(uri: str, rospack: RosPack = None) -> str:
     ), f"Asset path is not relative: {relative_path}"
 
     assert (
-        package / relative_path
+            package / relative_path
     ).is_absolute(), f"Resolved path is not absolute: {package / relative_path}"
 
     return str(package / relative_path)
@@ -112,7 +112,7 @@ def resolve_ros_uris(urdf: Element, rospack: RosPack = None) -> None:
     for mesh_node in urdf.findall(".//collision/*/mesh[@filename]"):
         ros_uri = mesh_node.get("filename", None)
         assert (
-            ros_uri is not None
+                ros_uri is not None
         ), f"Mesh node without filename: '{mesh_node.tag}' : {mesh_node.attrib}"
 
         absolute_path = abspath_from_ros_uri(ros_uri, rospack)
@@ -120,12 +120,25 @@ def resolve_ros_uris(urdf: Element, rospack: RosPack = None) -> None:
         mesh_node.set("filename", absolute_path)
 
 
+def resolve_uris(urdf: Element, base_path: str = None) -> None:
+    """Resolve all collision mesh URIs to absolute paths"""
+    for mesh_node in urdf.findall(".//collision/*/mesh[@filename]"):
+        uri = mesh_node.get("filename", None)
+        assert (
+                uri is not None
+        ), f"Mesh node without filename: '{mesh_node.tag}' : {mesh_node.attrib}"
+
+        absolute_path = base_path + uri if base_path is not None else uri
+
+        mesh_node.set("filename", str(absolute_path))
+
+
 def populate_sensors(mjcf: Element, sensor_config: Element) -> None:
     """Add sites and sensors to an MJCF object"""
     for body_node in sensor_config.findall("./body"):
         body_name = body_node.get("name", None)
         assert (
-            body_name is not None
+                body_name is not None
         ), f"Bad sensor configuration; body node has no name ({body_node.attrib})"
 
         body_in_mjcf = mjcf.find(f".//body[@name='{body_name}']")
@@ -134,7 +147,6 @@ def populate_sensors(mjcf: Element, sensor_config: Element) -> None:
         body_in_mjcf.extend(body_node.findall("./site"))
 
     mjcf.extend(sensor_config.findall("./sensor"))
-
 
 # Copyright (c) 2022 Fraunhofer IPA
 #
