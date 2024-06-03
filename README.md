@@ -3,7 +3,7 @@
 <img src="./pictures/gr1t1_mjcf.png" width="300" height="360" />
 <img src="./pictures/gr1t2_mjcf.png" width="300" height="360" />
 
-Welcome to the Fourier Intelligence Wiki-MJCF Repository! 
+Welcome to the Fourier Intelligence Wiki-MJCF Repository!
 This repository provides a tool to transfer from URDF file to MJCF.
 
 ## User Guide
@@ -74,6 +74,8 @@ If you want to test the output mjcf file, you can refer to the following reposit
 - [Wiki-GRx-Mujoco in Github](https://gitee.com/FFTAI/wiki-grx-mujoco/)
 - [Wiki-GRx-Mujoco in Gitee](https://gitee.com/FourierIntelligence/wiki-grx-mujoco/)
 
+---
+
 ## Known Issues
 
 ### ModuleNotFoundError: No module named 'defusedxml'
@@ -129,3 +131,8 @@ pip install rospkg
 ## Thanks
 
 - https://github.com/balandbal/urdf2mjcf
+
+---
+
+Thank you for your interest in the Fourier Intelligence GRx Robot Repositories.
+We hope you find this resource helpful in your robotics projects!
