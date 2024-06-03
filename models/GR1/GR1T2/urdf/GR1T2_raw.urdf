@@ -41,7 +41,8 @@
             </geometry>
         </collision>
     </link>
-    <link name="l_thigh_roll">
+    <link
+            name="link_left_thigh_roll">
         <inertial>
             <origin
                     xyz="0.042108 5.3388E-05 0.0025561"
@@ -214,7 +215,8 @@
                 effort="160"
                 velocity="37.38"/>
     </joint>
-    <link name="l_shank_pitch">
+    <link
+            name="link_left_shank_pitch">
         <inertial>
             <origin
                     xyz="0.0026504 0.0058504 -0.12267"
