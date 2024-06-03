@@ -1,18 +1,32 @@
-<robot name="GR1T2">
-    <link name="base">
+<robot
+        name="GR1T2">
+    <link
+            name="base">
         <inertial>
-            <origin xyz="-0.048532 -0.00089322 -0.032851" rpy="0 0 0"/>
-            <mass value="4.9859"/>
-            <inertia ixx="0.045749" ixy="-0.00020848" ixz="-0.0025121" iyy="0.016772" iyz="-4.364E-05"
+            <origin
+                    xyz="-0.048532 -0.00089322 -0.032851"
+                    rpy="0 0 0"/>
+            <mass
+                    value="4.9859"/>
+            <inertia ixx="0.045749"
+                     ixy="-0.00020848"
+                     ixz="-0.0025121"
+                     iyy="0.016772"
+                     iyz="-4.364E-05"
                      izz="0.048814"/>
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <origin
+                    xyz="0 0 0"
+                    rpy="0 0 0"/>
             <geometry>
-                <mesh filename="../meshes/base.STL"/>
+                <mesh
+                        filename="../meshes/base.STL"/>
             </geometry>
-            <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1"/>
+            <material
+                    name="">
+                <color
+                        rgba="0.75294 0.75294 0.75294 1"/>
             </material>
         </visual>
     </link>
