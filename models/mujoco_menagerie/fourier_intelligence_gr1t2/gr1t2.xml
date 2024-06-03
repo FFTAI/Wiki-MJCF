@@ -72,7 +72,7 @@
             <inertial pos="-0.048532 -0.00089322 -0.032851" quat="0.359123 0.355323 -0.61214 0.608326" mass="4.9859" diaginertia="0.0502243 0.0443403 0.0167704"/>
             <freejoint/>
 
-            <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="base"/>
+            <geom class="visual" rgba="0.75294 0.75294 0.75294 1" mesh="base"/>
             <body name="link_left_thigh_roll" pos="-0.048 0.105 -0.0575">
                 <inertial pos="0.042108 5.3388e-05 0.0025561" quat="0.000951199 0.75733 0.00226652 0.653028" mass="1.24084" diaginertia="0.00139721 0.00109616 0.000971712"/>
                 <joint name="joint_left_hip_roll" pos="0 0 0" axis="1 0 0" range="-0.09 0.79"/>
