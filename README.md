@@ -1,4 +1,4 @@
-# Wiki-MJCF
+# Wiki-GRx-MJCF
 
 <img src="./pictures/gr1t1_mjcf.png" width="300" height="360" />
 <img src="./pictures/gr1t2_mjcf.png" width="300" height="360" />
